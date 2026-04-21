@@ -1,0 +1,36 @@
+import java.io.*;
+import java.util.*;
+
+// Student class
+class Student implements Serializable {
+    int id;
+    String name;
+    String studentClass;
+    double attendance;
+    int marks;
+
+    Student(int id, String name, String studentClass, double attendance, int marks) {
+        this.id = id;
+        this.name = name;
+        this.studentClass = studentClass;
+        this.attendance = attendance;
+        this.marks = marks;
+    }
+}
+
+public class StudentManagementSystem {
+
+    static LinkedList<Student> students = new LinkedList<>();
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        loadFromFile();
+
+        while (true) {
+            System.out.println("\n===== STUDENT MANAGEMENT SYSTEM =====");
+            System.out.println("1. Add Student");
+            System.out.println("2. View Students");
+            System.out.println("3. Search Student (by ID)");
+            System.out.println("4. Delete Student");
+            System.out.println("5. Sort by Marks");
