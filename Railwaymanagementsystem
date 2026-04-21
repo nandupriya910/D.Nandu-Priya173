@@ -1,0 +1,37 @@
+import java.util.*;
+
+class Train {
+    String name;
+    int totalSeats = 50;
+    int bookedSeats = 0;
+
+    Train(String name) {
+        this.name = name;
+    }
+}
+
+class Ticket {
+    String id;
+    String details;
+
+    Ticket(String id, String details) {
+        this.id = id;
+        this.details = details;
+    }
+}
+
+public class RailwayAdvancedUI {
+
+    static Scanner sc = new Scanner(System.in);
+    static ArrayList<Ticket> tickets = new ArrayList<>();
+    static int ticketCounter = 1;
+    static int seatNo = 1;
+
+    // Train database
+    static ArrayList<Train> trains = new ArrayList<>();
+
+    public static void main(String[] args) {
+
+        // Sample trains
+        trains.add(new Train("Chennai Express"));
+}
