@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+
+public class SocialNetworkFriendSuggestion {
+
+    static Map<String, Set<String>> graph = new HashMap<>();
+    static Scanner sc = new Scanner(System.in);
+
+    public static void main(String[] args) {
+
+        loadData();
+
+        while (true) {
+            System.out.println("\n===== SOCIAL NETWORK =====");
+            System.out.println("1. Add User");
+            System.out.println("2. Add Friendship");
+            System.out.println("3. View Friends");
+            System.out.println("4. Suggest Friends (Ranked)");
+            System.out.println("5. Show Network (DFS)");
+            System.out.println("6. Search User");
+            System.out.println("7. Save & Exit");
+
+            System.out.print("Enter choice: ");
+            int ch = sc.nextInt();
+            sc.nextLine();
+
+            switch (ch) {
+                case 1: addUser(); break;
+                case 2: addFriendship(); break;
+                case 3: viewFriends(); break;
+                case 4: suggestFriends(); break;
+                case 5: showNetworkDFS(); break;
+                case 6: searchUser(); break;
+                case 7: saveData(); return;
+                default: System.out.println("Invalid choice!");
+            }
+}
